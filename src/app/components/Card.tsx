@@ -34,7 +34,7 @@ const Card = ({ data, slug, type } : Props) => {
             scale: 1.05,
             },
         }}
-        className={`relative w-[8.4rem] h-48 md:h-96 md:w-80 shrink-0 overflow-hidden rounded-xl p-2 md:p-8 bg-center bg-cover brightness-90 ${type==="page" ? "w-full" : ""}`}
+        className={`relative w-[8.4rem] h-48 md:h-96 md:w-80 shrink-0 overflow-hidden rounded-xl p-2 md:p-8 bg-center bg-cover brightness-90 ${type==="page" ? "md:w-full" : ""}`}
         style={{backgroundImage: slug === "phim-moi-cap-nhat" ? `url(${data.poster_url})` : `url(https://phimimg.com/${data.poster_url})`}}
     >
       <div className="relative z-10 text-white">
@@ -63,7 +63,7 @@ const Card = ({ data, slug, type } : Props) => {
       </div>
       <button 
         onClick={() => router.push(`/detail/${data.slug}`)} 
-        className="absolute bottom-4 right-6 left-6 md:left-4 md:right-4 z-20 text-xs md:text-sm rounded border-2 border-white bg-white py-1 md:py-2 text-center font-mono font-black uppercase text-neutral-800 backdrop-blur transition-colors hover:bg-white/30 hover:text-red-500"
+        className={`absolute bottom-4 z-20 text-xs md:text-sm rounded border-2 border-white bg-white py-1 md:py-2 text-center font-mono font-black uppercase text-neutral-800 backdrop-blur transition-colors hover:bg-white/30 hover:text-red-500 ${type==="page" ? "right-4 left-4 md:left-6 md:right-6" : "right-6 left-6 md:left-4 md:right-4"}`}
       >
         Xem Phim
       </button>
