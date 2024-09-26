@@ -19,7 +19,8 @@ export type Film = {
   thumb_url: string,
   year: number,
   _id: string,
-  episode_current?: string
+  episode_current?: string,
+  data?: any
 }
 
 export type CurrentSlideData = {

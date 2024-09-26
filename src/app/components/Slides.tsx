@@ -7,7 +7,6 @@ type Props = {
 };
 
 function Slides({ data }: Props) {
-  console.log(data);
   
   return (
     <div className="flex w-full gap-6">

@@ -35,7 +35,7 @@ const ListCard = ({ slug, type, page, limit } : Props) => {
   }, [])
     
   return (
-    <div className="flex flex-wrap justify-center sm:justify-start items-center gap:2 md:gap-4 lg:gap-8">
+    <div className="flex flex-wrap justify-between md:justify-center sm:justify-start items-center gap:2 md:gap-4 lg:gap-8">
         {Array.isArray(listData) && (
             listData.map((item: Film, index: number) => (
                 <CardFilm type={type} key={index} data={item} slug={slug} />

@@ -13,7 +13,7 @@ const HALF_ROTATION_RANGE = 32.5 / 2;
 
 
 const TiltCard = ({details}:any) => {
-    const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
   
     const x = useMotionValue(0);
     const y = useMotionValue(0);

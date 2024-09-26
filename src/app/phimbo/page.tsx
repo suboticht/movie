@@ -9,7 +9,7 @@ const PhimBo = () => {
   return (
     <div className='text-white bg-slate-800'>
       <Header />
-      <div className='container mx-auto pt-24 mb-10'>
+      <div className='container mx-auto p-4 pt-24 mb-10'>
         <TitleCategory type="page" ttl="Phim bộ" path="/" />
         <ListCard type="page" slug="phim-bo" limit={20} />
         <Pagination slug="phimbo" page={1} />

@@ -18,7 +18,7 @@ const PhimBoId = () => {
   return (
     <div className='text-white bg-slate-800'>
       <Header />
-      <div className='container mx-auto pt-24 mb-10'>
+      <div className='container mx-auto p-4 pt-24 mb-10'>
         <Breadcrumb />
         <TitleCategory type="page" ttl="Phim bộ" path="/" />
         <ListCard page={Number(params.Id)} type="page" slug="phim-bo" limit={20} />

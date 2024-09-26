@@ -6,6 +6,8 @@ import Breadcrumb from '@/app/components/Breadcrumb'
 import Footer from '@/app/components/Footer'
 import Header from '@/app/components/Header'
 import Thumbnail from '@/app/components/Thumbnail';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const DetailBySlug = () => {
   const [details, setDetails] = useState<any>()
@@ -25,13 +27,11 @@ const DetailBySlug = () => {
   }
   fetchDetail()
   }, [])
-
-  console.log(details);
   
   return (
     <div className='text-white bg-slate-800'>
       <Header />
-      <div className='container mx-auto pt-24 mb-10'>
+      <div className='container mx-auto p-4 pt-24 mb-10'>
         <Breadcrumb />
         <div 
           className="bg-black rounded-lg bg-cover bg-center"
@@ -48,6 +48,9 @@ const DetailBySlug = () => {
                   <span className='text-blue-500 font-medium text-xs lg:text-base'>{details?.category.map((item:any) => item?.name).join(", ")}</span>
                 </p>
                 <p className='mt-5 text-sm lg:text-lg'>{details?.content}</p>
+                <Button variant="destructive" className='mt-5 w-full uppercase font-medium text-lg'>
+                  <Link href={`/xemphim/${details?.slug}`} >Xem phim</Link>
+                </Button>
               </div>
             </div>
           </div>
