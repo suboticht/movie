@@ -68,7 +68,7 @@ const TiltCard = ({details}:any) => {
           className="absolute inset-4 grid place-content-center rounded-xl shadow-lg bg-center bg-cover"
         >
           <Link
-            href="/"
+            href={`/xemphim/${details?.slug}`}
             style={{
               transform: "translateZ(50px)",
             }}
