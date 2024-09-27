@@ -24,8 +24,6 @@ const ListCard = ({ slug, type, page, limit } : Props) => {
             } else {
               filmData = page ? await seriesData(slug, page, limit) : await seriesData(slug, page=1, limit)
             }
-            
-            // type === "page" ? setListData(filmData.items) : setListData(filmData.items.slice(0, 8))
             setListData(filmData.items)
           } catch(err) {
             console.log(err);
