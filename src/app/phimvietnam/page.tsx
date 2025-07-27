@@ -12,7 +12,7 @@ const PhimVietNam = () => {
       <div className='container mx-auto p-4 pt-24 mb-10'>
         <TitleCategory type="page" ttl="Phim việt nam" path="/" />
         <ListCard type="page" slug="viet-nam" limit={20} />
-        <Pagination slug="vietnam" page={1} />
+        <Pagination slug="phimvietnam" page={1} />
       </div>
       <Footer />
     </div>
