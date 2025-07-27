@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react'
 import featuredData from '@/api/featuredData'
 import seriesData from '@/api/seriesData'
+import vietNamData from '@/api/vietNamData'
 import CardFilm from './Card'
 import { Film } from '../page'
 
@@ -21,7 +22,11 @@ const ListCard = ({ slug, type, page, limit } : Props) => {
             let filmData:any
             if(slug === "phim-moi-cap-nhat") {
               filmData = page ? await featuredData(slug, page, limit) : await featuredData(slug, page=1, limit)
-            } else {
+            }
+            else if(slug === "viet-nam") {
+              filmData = page ? await vietNamData(slug, page, limit) : await vietNamData(slug, page=1, limit)
+            }
+            else {
               filmData = page ? await seriesData(slug, page, limit) : await seriesData(slug, page=1, limit)
             }
             setListData(filmData.items)
