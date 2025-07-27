@@ -180,4 +180,8 @@ const menus = [
     item: "Phim bộ",
     path: "/phimbo",
   },
+  {
+    item: "Phim Việt Nam",
+    path: "/phimvietnam",
+  },
 ];
